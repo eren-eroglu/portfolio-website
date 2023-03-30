@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Home from "./Home";
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="bg-black min-h-screen flex flex-col items-center justify-center">
+       <Home/>
+        <div className="flex justify-center ">
+          <div className="flex items-center space-x-4">
+            <Link
+              to="portfolio-website/skills"
+              className="bg-gradient-to-br from-pink-500 to-purple-500 text-white py-2 px-4 rounded-full hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            >
+              Skills
+            </Link>
+            <Link
+              to="/projects"
+              className="bg-gradient-to-br from-blue-500 to-teal-500 text-white py-2 px-4 rounded-full hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/contact"
+              className="bg-gradient-to-br from-yellow-500 to-orange-500 text-white py-2 px-4 rounded-full hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+              onClick={() => {alert(1)}}
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+        <Routes>
+          <Route path="portfolio-website/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
