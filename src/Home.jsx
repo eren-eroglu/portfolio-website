@@ -4,7 +4,7 @@ import pp from "./assets/ai.png";
 import "animate.css";
 import { useContext } from "react";
 import { MyContext } from "./Context";
-
+import { FiMail } from "react-icons/fi";
 const Home = () => {
   const {
     myState,
@@ -90,6 +90,16 @@ const Home = () => {
           </Link>
         </div>
       </div>
+      <div className="flex justify-center mt-12"> <a href="mailto:ereneroglu.dev@gmail.com"><footer className="bg-pink-500 hover:bg-pink-800 hover:cursor-pointer transition-all duration-200 bg-opacity-40 rounded-full py-4">
+       <div className="container mx-auto px-4">
+       <div className="flex flex-wrap items-center justify-between">
+         
+          
+            <FiMail className="text-white text-xl hover:text-white" />
+         
+        </div> 
+      </div>
+    </footer></a></div>
     </div>
   );
 };

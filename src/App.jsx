@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import bg from './assets/bg.jpg'
+import { FiMail } from "react-icons/fi";
 function App() {
   
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="portfolio-website/skills" element={<Skills />} />
           <Route path="/portfolio-website/projects" element={<Projects />} />
           <Route path="/portfolio-website/contact" element={<Contact />} />
-        </Routes>
+        </Routes> 
       </div>
     </Router>
   );
