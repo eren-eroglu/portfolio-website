@@ -72,19 +72,19 @@ const Home = () => {
         <div className="flex justify-center mt-12 space-x-4 text-xl  animate__animated animate__flash">
           <Link
             to="/portfolio-website/skills"
-            className="btn text-white bg-white bg-opacity-25 btn-outline "
+            className="btn bg-black bg-opacity-40 btn-secondary btn-outline "
           >
             {skills}
           </Link>
           <Link
             to="/portfolio-website/projects"
-            className="btn text-white bg-white bg-opacity-25 btn-outline "
+            className="btn bg-black bg-opacity-40 btn-secondary btn-outline "
           >
         {projects}
           </Link>
           <Link
             to="/portfolio-website/contact"
-            className="btn text-white bg-white bg-opacity-25 btn-outline"
+            className="btn bg-black bg-opacity-40 btn-secondary btn-outline "
           >
          {contact}
           </Link>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { MyContext } from "./Context";
+import icon from "./assets/tailwind.png";
 function Skills() {
   const { myStateThird, setMyStateThird, lang, home, setHome } =
     useContext(MyContext);
@@ -26,6 +27,7 @@ function Skills() {
             <i className="fab fa-html5 text-6xl text-yellow-500"></i>
             <p className="mt-2 text-lg font-medium text-white">HTML5</p>
           </div>
+
           <div className="flex flex-col items-center">
             <i className="fab fa-css3-alt text-6xl text-blue-500"></i>
             <p className="mt-2 text-lg font-medium text-white">CSS3</p>
@@ -54,11 +56,16 @@ function Skills() {
             <i className="fas fa-server text-6xl text-blue-500"></i>
             <p className="mt-2 text-lg font-medium text-white">Express.js</p>
           </div>
+          <div className="flex flex-col items-center">
+           <img src={icon} alt="tailwind" style={{height:'45px'}}/>
+            <p className="mt-2 text-lg font-medium text-white">Tailwind.css</p>
+          </div>
+
           <div className="flex flex-col items-center"></div>
         </div>{" "}
         <div className="flex justify-center items-center w-full">
           {" "}
-          <Link to="/portfolio-website" className="btn btn-primary">
+          <Link to="/portfolio-website" className="btn btn-primary mt-3">
             {home}{" "}
           </Link>
         </div>
