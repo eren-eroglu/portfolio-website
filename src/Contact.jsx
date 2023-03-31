@@ -23,13 +23,13 @@ function Contact() {
         {contactText}
       </p>
       <div className="flex justify-center items-center space-x-4">
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full hover:bg-gray-300">
+        <a href="https://www.linkedin.com/in/eroglueren/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full hover:bg-gray-300">
           <FaLinkedin className="text-gray-900 text-2xl" />
         </a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full hover:bg-gray-300">
+        <a href="https://github.com/eren-eroglu" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full hover:bg-gray-300">
           <FaGithub className="text-gray-900 text-2xl" />
         </a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full hover:bg-gray-300">
+        <a href="https://mobile.twitter.com/35ereneroglu" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full hover:bg-gray-300">
           <FaTwitter className="text-gray-900 text-2xl" />
         </a>
       </div><hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"/>
