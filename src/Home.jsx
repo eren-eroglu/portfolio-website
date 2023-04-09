@@ -5,6 +5,7 @@ import "animate.css";
 import { useContext } from "react";
 import { MyContext } from "./Context";
 import { FiMail } from "react-icons/fi";
+import logo from "./assets/logo.png";
 const Home = () => {
   const {
     myState,
@@ -21,6 +22,7 @@ const Home = () => {
     setContact,
   } = useContext(MyContext);
   const [isTyping, setIsTyping] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -29,6 +31,14 @@ const Home = () => {
 
     return () => clearTimeout(timeout);
   }, []);
+  const LoadingScreen = () => {
+    return (
+      <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
+        <img src={logo} alt="logo" className="w-24 animate__animated animate__rotateIn" />
+      </div>
+    );
+  };
+  
   useEffect(() => {
     if (lang == "en") {
       setMyState("Hello, I'm Eren Eroğlu");
@@ -43,7 +53,18 @@ const Home = () => {
       setProjects('Projeler')
       setContact('İletişim')
     }
+ // Set isLoading to false once the data has loaded
   }, [lang]);
+  useEffect(()=> {
+setTimeout(() => {
+      setIsLoading(false);
+}, 1000);
+  },[])
+  // Conditionally render the loading screen
+  if (isLoading) {
+    return   <LoadingScreen />
+  }
+
   return (
     <div className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-12">
       <img
