@@ -34,7 +34,7 @@ const Home = () => {
   const LoadingScreen = () => {
     return (
       <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
-        <img src={logo} alt="logo" className="w-24 animate__animated animate__rotateIn" />
+        <img src={logo} alt="logo" className="w-32 p-4 bg-white rounded-2xl bg-opacity-25 animate__animated animate__rotateIn" />
       </div>
     );
   };

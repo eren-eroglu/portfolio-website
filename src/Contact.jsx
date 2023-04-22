@@ -47,7 +47,7 @@ function Contact() {
           href="https://www.linkedin.com/in/eroglueren/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white p-2 rounded-full hover:bg-gray-300"
+          className="bg-purple-300 p-2 transition-all duration-300 rounded-full hover:bg-pink-200"
         >
           <FaLinkedin className="text-gray-900 text-2xl" />
         </a>
@@ -55,7 +55,7 @@ function Contact() {
           href="https://github.com/eren-eroglu"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white p-2 rounded-full hover:bg-gray-300"
+          className="bg-purple-300 p-2 transition-all duration-300 rounded-full hover:bg-pink-200"
         >
           <FaGithub className="text-gray-900 text-2xl" />
         </a>
@@ -63,7 +63,7 @@ function Contact() {
           href="https://mobile.twitter.com/35ereneroglu"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white p-2 rounded-full hover:bg-gray-300"
+          className="bg-purple-300 p-2 transition-all duration-300 rounded-full hover:bg-pink-200"
         >
           <FaTwitter className="text-gray-900 text-2xl" />
         </a>
