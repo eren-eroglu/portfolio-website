@@ -70,9 +70,18 @@ setTimeout(() => {
       <img
         src={pp}
         alt="Profile Picture"
-        className="w-48 h-48 rounded-full mx-auto mb-8 border border-2 border-purple-500"
+        className="w-48 h-48 rounded-full mx-auto mb-6 border border-2 border-purple-500"
       />
-
+   <div className="flex justify-center mb-5"> <a href="mailto:ereneroglu.dev@gmail.com"><footer className="bg-black hover:bg-pink-800 hover:cursor-pointer transition-all duration-200 bg-opacity-50 rounded-full py-4">
+       <div className="container mx-auto px-4">
+       <div className="flex flex-wrap items-center justify-between">
+         
+          
+            <FiMail className="text-white text-xl hover:text-white" />
+         
+        </div> 
+      </div>
+    </footer></a></div>
       <div className="text-center typewriter">
         <h1 className="text-2xl md:text-6xl lg:text-7xl tracking-tight bg-slate-600 bg-opacity-30 p-2 rounded-2xl">
           {myState}
@@ -82,7 +91,7 @@ setTimeout(() => {
         <p
           className={
             isTyping
-              ? "typewriter text-center animate__animated animate__heartBeat mt-2"
+              ? "typewriter text-center animate__animated animate__heartBeat mt-4"
               : "hidden text-sm "
           }
         >
@@ -111,16 +120,7 @@ setTimeout(() => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center mt-12"> <a href="mailto:ereneroglu.dev@gmail.com"><footer className="bg-pink-500 hover:bg-pink-800 hover:cursor-pointer transition-all duration-200 bg-opacity-40 rounded-full py-4">
-       <div className="container mx-auto px-4">
-       <div className="flex flex-wrap items-center justify-between">
-         
-          
-            <FiMail className="text-white text-xl hover:text-white" />
-         
-        </div> 
-      </div>
-    </footer></a></div>
+   
     </div>
   );
 };
