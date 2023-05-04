@@ -67,11 +67,10 @@ setTimeout(() => {
 
   return (
     <div className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-12">
-      <img
-        src={pp}
-        alt="Profile Picture"
-        className="w-48 h-48 rounded-full mx-auto mb-6 border border-2 border-purple-500"
-      />
+      <div className="relative w-48 h-48 mx-auto mb-6 border-2 border-purple-500 rounded-full overflow-hidden ">
+  <img src={pp} alt="Profile Picture" className="absolute inset-0 w-full h-full object-cover rounded-full shadow-md transition-transform duration-200 transform hover:scale-105" />
+</div>
+
    <div className="flex justify-center mb-5"> <a href="mailto:ereneroglu.dev@gmail.com"><footer className="bg-black hover:bg-pink-800 hover:cursor-pointer transition-all duration-200 bg-opacity-50 rounded-full py-4">
        <div className="container mx-auto px-4">
        <div className="flex flex-wrap items-center justify-between">
