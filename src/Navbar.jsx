@@ -1,10 +1,39 @@
-import React, { useState } from "react";
-import logo from "./assets/logo.png";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
 import { MyContext } from "./Context";
+import logo from "./assets/logo.png";
+
 function Navbar() {
-  const { myState, setMyState, lang, setLang, setMyStateFourth, myStateFourth } = useContext(MyContext);
+  const {
+    myState,
+    setMyState,
+    lang,
+    setLang,
+    setMyStateFourth,
+    myStateFourth,
+  } = useContext(MyContext);
+
+  const renderButton = (text, value) => {
+    const isActive = lang === value;
+    const buttonStyle = {
+      borderBottom: isActive ? "2px solid pink" : "none",
+      padding: "8px 16px",
+      borderRadius: "4px",
+      margin: "7px",
+    };
+
+    return (
+      <button
+        className={`text-lg text-gray-300 hover:text-pink-500 ${
+          isActive ? "shadow-lg shadow-rose-900" : ""
+        }`}
+        style={buttonStyle}
+        onClick={() => setLang(value)}
+      >
+        {text}
+      </button>
+    );
+  };
 
   return (
     <nav>
@@ -21,32 +50,8 @@ function Navbar() {
             </Link>
           </div>
           <div className="flex">
-            <button
-              className="text-lg text-gray-300 hover:text-pink-500"
-              style={{
-                borderBottom: lang === "en" ? "2px solid pink" : "none",
-                padding: "8px 16px",
-                borderRadius: "4px"
-              }}
-              onClick={() => {
-                setLang('en')
-              }}
-            >
-              ENGLISH
-            </button>{" "}
-            <button
-              className="ml-4 text-lg text-gray-300 hover:text-pink-500"
-              style={{
-                borderBottom: lang === "tr" ? "2px solid pink" : "none",
-                padding: "8px 16px",
-                borderRadius: "4px"
-              }}
-              onClick={() => {
-                setLang("tr");
-              }}
-            >
-              TÜRKÇE
-            </button>
+            {renderButton("ENGLISH", "en")}
+            {renderButton("TÜRKÇE", "tr")}
           </div>
         </div>
       </div>

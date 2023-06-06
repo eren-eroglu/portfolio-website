@@ -56,6 +56,7 @@ function Skills() {
             <i className="fas fa-server text-6xl text-blue-500"></i>
             <p className="mt-2 text-lg font-medium text-white">Express.js</p>
           </div>
+       
           <div className="flex flex-col items-center">
            <img src={icon} alt="tailwind" style={{height:'45px'}} className="sm:mb-4"/>
             <p className="mt-2 text-lg font-medium text-white">Tailwind.css</p>
